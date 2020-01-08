@@ -61,6 +61,11 @@ PRODUCT_COPY_FILES += \
 $(foreach f,$(wildcard vendor/aosip/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
 
+# Allows registering device to Google easier for gapps
+# Integrates package for easier Google Pay fixing
+PRODUCT_PACKAGES += \
+    sqlite3
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
