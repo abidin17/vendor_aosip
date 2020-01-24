@@ -47,9 +47,10 @@ PRODUCT_COPY_FILES += \
     vendor/aosip/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
-# Charger
+# Offline charger
 PRODUCT_PACKAGES += \
-    charger_res_images
+    charger_res_images \
+    product_charger_res_images
 
 # Configs
 PRODUCT_COPY_FILES += \
