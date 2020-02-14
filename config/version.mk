@@ -23,6 +23,12 @@ ifeq ($(DERP_BUILDTYPE), CI)
     AOSIP_VERSION := $(AOSIP_BUILD_VERSION)-$(DERP_BUILDTYPE)-$(AOSIP_BUILD)-$(shell date -u +%Y%m%d-%H%M)
 endif
 
+ifeq ($(FORCE_TIME_STAMP), true)
+	ifneq ($(DERP_BUILDTYPE), CI)
+		AOSIP_VERSION := $(AOSIP_BUILD_VERSION)-$(DERP_BUILDTYPE)-$(AOSIP_BUILD)-$(shell date -u +%Y%m%d-%H%M)
+	endif
+endif
+
 ifndef AOSIP_VERSION
     AOSIP_VERSION := $(AOSIP_BUILD_VERSION)-$(DERP_BUILDTYPE)-$(AOSIP_BUILD)-$(BUILD_DATE)
 endif
