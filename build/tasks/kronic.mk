@@ -1,4 +1,4 @@
-AOSIP_TARGET_PACKAGE := $(PRODUCT_OUT)/DerpFest-$(AOSIP_VERSION).zip
+AOSIP_TARGET_PACKAGE := $(PRODUCT_OUT)/UnDerp-$(AOSIP_VERSION).zip
 
 .PHONY: otapackage kronic bacon
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
@@ -6,7 +6,7 @@ kronic: otapackage
 	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(AOSIP_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(AOSIP_TARGET_PACKAGE) | cut -d ' ' -f1 > $(AOSIP_TARGET_PACKAGE).md5sum
 	@echo -e ""
-	@echo -e "${cya}Building ${bldcya}DerpFest ${txtrst}";
+	@echo -e "${cya}Building ${bldcya}UnDerp ${txtrst}";
 	@echo -e ""
 	@echo -e ${CL_GRN}" █    ██  ███▄    █ ▓█████▄ ▓█████  ██▀███   ██▓███  "
 	@echo -e ${CL_GRN}" ██  ▓██▒ ██ ▀█   █ ▒██▀ ██▌▓█   ▀ ▓██ ▒ ██▒▓██░  ██▒"
