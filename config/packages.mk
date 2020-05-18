@@ -1,5 +1,7 @@
 # Required packages
 PRODUCT_PACKAGES += \
+    OmniRecord \
+    OmniStyle \
     AOSiPOverlayStub \
     Gallery2 \
     Jelly \
